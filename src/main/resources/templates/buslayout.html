@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Seat Booking</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Seat Booking</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <form th:action="@{/book}" method="post">
+                    <table class="table table-bordered">
+    <tbody>
+        <tr th:each="row : ${busLayout}">
+            <td th:each="seat : ${row.seats}" th:class="${seat.available} ? 'available' : 'booked'">
+                <button type="submit" th:if="${seat.available}" th:name="selectedSeats" th:value="${seat.number}">
+                    <span th:text="${seat.number}"></span>
+                </button>
+                <span th:if="${!seat.available}" th:text="'Taken'"></span> <!-- Customize this message -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

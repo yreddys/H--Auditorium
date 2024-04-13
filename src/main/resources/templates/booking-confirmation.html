@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Booking Confirmation</h2>
+        <p>Seat Number: <span th:text="${booking.seatNumber}"></span></p>
+        <p>Name: <span th:text="${booking.name}"></span></p>
+        <p>Age: <span th:text="${booking.age}"></span></p>
+        <p>Mobile: <span th:text="${booking.mobile}"></span></p>
+        <p>Email: <span th:text="${booking.email}"></span></p>
+        <p>Fare: <span th:text="${booking.fare}"></span></p>
+        
+        <a class="btn btn-primary mt-3" href="/bus">Book another</a>
+        <a class="btn btn-danger mt-3" href="/logout">Logout</a>
+    
+    </div>
+</body>
+</html>

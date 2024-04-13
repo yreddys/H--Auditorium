@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adding Show Form</title>
+    <style>
+        .form-row {
+            margin-bottom: 10px;
+        }
+
+        .form-row label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-row select,
+        .form-row input[type="date"] {
+            width: 10%;
+            padding: 5px;
+        }
+
+        .form-row button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Adding show form</h1>
+    <form action="/addingbus" method="post" th:object="${availablebus}">
+        <div class="form-row">
+            <label for="showID">Show ID</label>
+            <select id="showID" name="showID" th:field="*{showID}">
+                <option value="R211">R211</option>
+                <option value="R212">R212</option>
+                <option value="R213">R213</option>
+                <option value="R214">R214</option>
+                <option value="R215">R215</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="showName">ShowName</label>
+            <select id="showName" name="showName" th:field="*{showName}">
+                <option value="Music">Music</option>
+                <option value="Dance Sleeper">Dance</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" th:field="*{showDate}">
+        </div>
+
+        <button type="submit">Save Bus</button>
+    </form>
+
+</body>
+
+</html>
