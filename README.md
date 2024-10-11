@@ -63,11 +63,9 @@ pipeline {
 
 
 
-### 1. Update System Packages (On Master & Worker Node)
-
-
+### 1. Update Package List (On Master & Worker Node)
 ```bash
-sudo apt-get update
+sudo apt update
 ```
 
 ### 2. Install Docker (On Master & Worker Node)
