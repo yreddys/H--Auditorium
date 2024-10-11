@@ -2,7 +2,7 @@
 
 ---
 
-### **Jenkins Pipeline Configuration**
+ **Jenkins Pipeline Configuration**
 
 ```markdown
 ## Jenkins Pipeline Configuration
@@ -59,7 +59,7 @@ pipeline {
 ```
 ```
 
----
+
 
 
 
