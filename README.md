@@ -1,3 +1,10 @@
+
+
+---
+
+### **Jenkins Pipeline Configuration**
+
+```markdown
 ## Jenkins Pipeline Configuration
 
 ```groovy
@@ -49,9 +56,12 @@ pipeline {
         }
     }
 }
+```
+```
 
+---
 
-To make this content copy-friendly for a README file, you can structure it with proper Markdown headings, formatting, and code blocks. Here's how you can format it:
+### **Kubernetes Cluster Setup Instructions**
 
 ```markdown
 ## Kubernetes Cluster Setup Instructions
@@ -113,4 +123,3 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 
 ```
 
-This format uses Markdown headings for better readability and includes all commands within code blocks, ensuring it is easy to copy directly from your README file.
