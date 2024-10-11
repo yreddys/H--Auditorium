@@ -134,7 +134,6 @@ sudo apt-get update
 # Install Jenkins
 sudo apt-get install jenkins -y
 
-
 # Update package manager repositories
 sudo apt-get update
 
@@ -158,4 +157,3 @@ sudo apt-get update
 
 # Install Docker and related components
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
