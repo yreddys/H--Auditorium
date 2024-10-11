@@ -120,40 +120,57 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 
 
 # Install OpenJDK 17 JRE Headless
+```bash
 sudo apt install openjdk-17-jre-headless -y
 
 # Download Jenkins GPG key
+```bash
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
 
+```bash
 # Add Jenkins repository to package manager sources
+```bash
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
 
-# Update package manager repositories
+# Update package manager 
+```bash
 sudo apt-get update
+```
 
 # Install Jenkins
+```bash
 sudo apt-get install jenkins -y
-
+```
 # Update package manager repositories
+```bash
 sudo apt-get update
-
+```
 # Install necessary dependencies
+```bash
+
 sudo apt-get install -y ca-certificates curl
-
+```
 # Create directory for Docker GPG key
+```bash
 sudo install -m 0755 -d /etc/apt/keyrings
-
+```
 # Download Docker's GPG key
+```bash
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-
+```
 # Ensure proper permissions for the key
+```bash
 sudo chmod a+r /etc/apt/keyrings/docker.asc
-
+```
 # Add Docker repository to Apt sources
+```bash
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
+```
 # Update package manager repositories
+```bash
 sudo apt-get update
-
+```
 # Install Docker and related components
+```bash
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
