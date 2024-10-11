@@ -64,6 +64,7 @@ pipeline {
 
 
 ### 1. Update Package List (On Master & Worker Node)
+
 ```bash
 sudo apt update
 ```
