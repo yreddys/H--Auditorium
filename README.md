@@ -67,7 +67,7 @@ pipeline {
 
 ```bash
 sudo apt update
-```
+
 
 ### 2. Install Docker (On Master & Worker Node)
 ```bash
