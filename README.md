@@ -64,6 +64,8 @@ pipeline {
 
 
 ### 1. Update System Packages (On Master & Worker Node)
+
+
 ```bash
 sudo apt-get update
 ```
@@ -118,5 +120,5 @@ kubectl apply -f https://docs.projectcalico.org/v3.20/manifests/calico.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.49.0/deploy/static/provider/baremetal/deploy.yaml
 ```
 
-```
+
 
