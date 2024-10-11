@@ -61,10 +61,7 @@ pipeline {
 
 ---
 
-### **Kubernetes Cluster Setup Instructions**
 
-```markdown
-## Kubernetes Cluster Setup Instructions
 
 ### 1. Update System Packages (On Master & Worker Node)
 ```bash
